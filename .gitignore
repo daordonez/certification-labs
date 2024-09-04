@@ -1,0 +1,84 @@
+# Archivos y directorios comunes para proyectos en C#
+
+# Archivos de compilación
+bin/
+obj/
+
+# Archivos específicos de Visual Studio
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.suo
+*.csproj.user
+*.ncb
+*.sdf
+*.opensdf
+*.cache
+*.tmp
+*.log
+
+# Archivos específicos de Rider
+.idea/
+
+# Archivos de paquetes NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+
+# Archivos de configuración de Azure DevOps
+.azure-pipelines/
+
+# Archivos específicos de .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos y directorios comunes para proyectos en Python
+
+# Entornos virtuales
+venv/
+ENV/
+env/
+.venv/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+.eggs/
+
+# Archivos de configuración de entornos de desarrollo
+*.env
+*.venv
+*.pypo
+*.pyd
+
+# Archivos y directorios comunes para herramientas de desarrollo
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+
+# Configuraciones de pytest
+.cache/
+
+# Archivos de configuración para IDEs y editores
+.idea/
+.vscode/
+
+# Otros archivos temporales
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Archivos generados por el sistema
+.DS_Store
+Thumbs.db
+

@@ -1,0 +1,15 @@
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/bin/Debug/net8.0/blob-client
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/bin/Debug/net8.0/blob-client.deps.json
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/bin/Debug/net8.0/blob-client.runtimeconfig.json
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/bin/Debug/net8.0/blob-client.dll
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/bin/Debug/net8.0/blob-client.pdb
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/blob-client.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/blob-client.AssemblyInfoInputs.cache
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/blob-client.AssemblyInfo.cs
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/blob-client.csproj.CoreCompileInputs.cache
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/blob-client.sourcelink.json
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/blob-client.dll
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/refint/blob-client.dll
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/blob-client.pdb
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/blob-client.genruntimeconfig.cache
+/Users/dordonez/Library/CloudStorage/OneDrive-Personal/dev/certification-labs/az/az-204/blob-client/blob-client/obj/Debug/net8.0/ref/blob-client.dll

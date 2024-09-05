@@ -1,12 +1,14 @@
 ﻿using Microsoft.Azure.Cosmos;
+using System;
+using DotNetEnv;
 
 public class Program
 {
     // Replace <documentEndpoint> with the information created earlier
-    private static readonly string EndpointUri = "<documentEndpoint>";
+    private static readonly string EndpointUri = System.Environment.GetEnvironmentVariable("COSMOSDB_DOCUMENT_ENDPOINT");
 
     // Set variable to the Primary Key from earlier.
-    private static readonly string PrimaryKey = "<your primary key>";
+    private static readonly string PrimaryKey = System.Environment.GetEnvironmentVariable("COSMOSDB_PRIVATE_KEY");
 
     // The Cosmos client instance
     private CosmosClient cosmosClient;
@@ -23,6 +25,8 @@ public class Program
 
     public static async Task Main(string[] args)
     {
+        //load env vars
+        DotNetEnv.Env.Load();
         try
         {
             Console.WriteLine("Beginning operations...\n");
@@ -45,6 +49,7 @@ public class Program
             Console.ReadKey();
         }
     }
+
     public async Task CosmosAsync()
     {
         // Create a new instance of the Cosmos Client
@@ -62,5 +67,12 @@ public class Program
         // Create a new database using the cosmosClient
         this.database = await this.cosmosClient.CreateDatabaseIfNotExistsAsync(databaseId);
         Console.WriteLine("Created Database: {0}\n", this.database.Id);
+    }
+
+    private async Task CreateContainerAsync()
+    {
+        // Create a new container
+        this.container = await this.database.CreateContainerIfNotExistsAsync(containerId, "/LastName");
+        Console.WriteLine("Created Container: {0}\n", this.container.Id);
     }
 }

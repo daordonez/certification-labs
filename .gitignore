@@ -1,6 +1,7 @@
 # Archivos con cadenas de conexión o datos sensibles
 .env
 **/.env
+**.env*
 
 # Archivos y directorios comunes para proyectos en C#
 #foo

@@ -1,4 +1,4 @@
-resourceGroupName="1-a5263cb4-playground-sandbox"
+resourceGroupName="1-674c4a7d-playground-sandbox"
 acrName="labaz204mypersonalacr"
 
 echo "Creating ACR: ${acrName} into: ${resourceGroupName}"

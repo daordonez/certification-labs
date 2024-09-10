@@ -1,0 +1,23 @@
+apiVersion: 2018-10-01
+type: Microsoft.ContainerInstance/containerGroups
+location: eastus
+name: secureacideploymet
+properties:
+  containers:
+  - name: myseccontainer
+    properties:
+      environmentVariables:
+        - name: 'NOTSECRET'
+          value: 'my-exposed-value'
+        - name: 'SECRET'
+          secureValue: 'my-secret-value'
+      image: mcr.microsoft.com/azuredocs/aci-helloworld
+      ports:
+        - port: 80
+      resources:
+        requests:
+          cpu: 1.0
+          memoryInGB: 1.5
+  osType: Linux
+  restartPolicy: Always
+tags: null

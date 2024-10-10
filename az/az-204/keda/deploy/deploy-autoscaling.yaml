@@ -15,7 +15,7 @@ metadata:
   labels:
     app: order-processor
 data:
-  servicebus-order-management-connectionstring: MyConnectionStringSpaceName
+  servicebus-order-management-connectionstring: "ENDPOINT_CONNECTION_STRING"
 ---
 apiVersion: keda.sh/v1alpha1 
 kind: ScaledObject

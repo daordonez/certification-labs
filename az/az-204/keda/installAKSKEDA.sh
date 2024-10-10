@@ -1,4 +1,4 @@
-resourceGroup="1-cf799106-playground-sandbox"
+resourceGroup="1-b9de7048-playground-sandbox"
 region="westus"
 randomSufix="${RANDOM}"
 clusterName="az204-aks-${randomSufix}"

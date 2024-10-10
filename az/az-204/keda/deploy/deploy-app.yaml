@@ -34,4 +34,4 @@ metadata:
   labels:
     app: order-processor
 data:
-  servicebus-connectionstring: MyConnectionStringSpaceName
+  servicebus-connectionstring: "ENDPOINT_CONNECTION_STRING"

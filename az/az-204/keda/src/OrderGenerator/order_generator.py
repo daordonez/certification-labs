@@ -2,11 +2,12 @@ import json
 import uuid
 import asyncio
 from faker import Faker
-from azure.servicebus import ServiceBusClient, ServiceBusMessage
+from azure.servicebus.aio import ServiceBusClient
+from azure.servicebus import ServiceBusMessage
 
 # Constantes
 QUEUE_NAME = "orders"
-CONNECTION_STRING = ""
+CONNECTION_STRING = "ENDPOINT_CONNECTION_STRING"
 
 # Clase Customer
 class Customer:
@@ -46,26 +47,32 @@ def determine_order_amount():
         except ValueError:
             print("That's not a valid amount, let's try that again.")
 
+#Función para crear batch de mensajes
+async def send_batch_messages(sender, request_amount):
+    #Crear el batch
+    async with sender:
+        batch_messages = await sender.create_message_batch()
+        
+        for _ in range(request_amount):
+            try:
+                #añadir mensajes al batch
+                order = generate_order()
+                # Serializar la orden a JSON
+                raw_order = json.dumps(order.__dict__, default=lambda o: o.__dict__)
+                batch_messages.add_message(ServiceBusMessage(raw_order))
+                print(f"Queuing order {order.Id} - A {order.ArticleNumber} for {order.Customer.FirstName} {order.Customer.LastName}")
+            except ValueError:
+                break
+        await sender.send_messages(batch_messages)
+        print(f"Sent a batch of {request_amount} of messages")
+
 # Función para encolar las órdenes en Azure Service Bus
 async def queue_orders(requested_amount):
     # Crear el cliente de Service Bus
     async with ServiceBusClient.from_connection_string(CONNECTION_STRING) as servicebus_client:
         sender = servicebus_client.get_queue_sender(queue_name=QUEUE_NAME)
         
-        async with sender:
-            for current_order_amount in range(requested_amount):
-                # Generar una nueva orden
-                order = generate_order()
-                # Serializar la orden a JSON
-                raw_order = json.dumps(order.__dict__, default=lambda o: o.__dict__)
-
-                # Crear el mensaje para la cola
-                order_message = ServiceBusMessage(raw_order)
-
-                print(f"Queuing order {order.Id} - A {order.ArticleNumber} for {order.Customer.FirstName} {order.Customer.LastName}")
-
-                # Enviar el mensaje a la cola
-                await sender.send_messages(order_message)
+        await send_batch_messages(sender, requested_amount)
 
 # Función principal
 async def main():
